@@ -40,3 +40,33 @@ class Cart(object):
         if product_id in self.cart:
             del self.cart[product_id]
             self.save()
+
+    def __iter__(self):
+        """
+        Перебір елементів в корзині і отримання продуктів з бази даних
+        """
+        product_ids = self.cart.keys()
+        # отримання об'єктів product і додавання їх у cart 
+        products = Product.objects.filter(id__in=product_ids)
+        for product in products:
+            self.cart[str(product.id)]['product'] = product
+
+        for item in self.cart.values():
+            item['price'] = Decimal(item['price'])
+            item['total_price'] = item['price'] * item['quantity']
+            yield item
+
+    def __len__(self):
+        """
+        Підрахунок усіх товарів у cart 
+        """
+        return sum(item['quantity'] for item in self.cart.values())
+    
+    def get_total_price(self):
+        """
+        Підрахунок вартості товарів у cart
+        """
+        return sum(Decimal(item['price']) * item['quantity'] for item in
+                self.cart.values())
+    
+    
