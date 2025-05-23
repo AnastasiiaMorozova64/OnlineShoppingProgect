@@ -39,10 +39,34 @@ a:hover {
 }
 
 #subheader {
-    background-color: #f1f1f1;
-    padding: 0.7em 1em;
-    border-bottom: 1px solid #ccc;
-    font-size: 0.95em;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 2px solid var(--border-color);
+}
+
+#subheader .cart {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+
+#subheader .cart a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+#subheader .cart a:hover {
+    text-decoration: underline;
 }
 
 #content {
@@ -207,4 +231,273 @@ a:hover {
     .product-list-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+form {
+    margin-top: 15px;
+}
+
+form select,
+form input[type="number"],
+form input[type="submit"] {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-right: 10px;
+    font-family: inherit;
+}
+
+/* Стиль для селекту (наприклад: кількість товару) */
+form select {
+    background-color: #fff;
+    cursor: pointer;
+    min-width: 60px;
+}
+
+/* Кнопка "Add to cart" */
+form input[type="submit"] {
+    margin-top: 15px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e45c34;
+}
+
+
+.cart {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cart thead {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.cart th,
+.cart td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart td img {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.cart td img:hover {
+    transform: scale(1.05);
+}
+
+.cart td a {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.cart .num {
+    font-weight: bold;
+    color: #333;
+}
+
+.cart .total td {
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+.cart .total td:first-child {
+    text-align: right;
+}
+
+/* Кнопки */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.button:hover {
+    background-color: #e45c34;
+}
+
+.button.light {
+    background-color: #ccc;
+    color: #333;
+}
+
+.button.light:hover {
+    background-color: #bbb;
+}
+
+/* Вирівнювання кнопок */
+.text-right {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* === CHECKOUT PAGE === */
+
+.order-info {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.order-info h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.order-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.order-info li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+    font-size: 1rem;
+}
+
+.order-info p {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: right;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* === ORDER FORM === */
+
+.order-form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.order-form p {
+    margin-bottom: 15px;
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+}
+
+.order-form input,
+.order-form textarea,
+.order-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.order-form input[type="submit"] {
+    width: auto;
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+    border-radius: 6px;
+}
+
+.order-form input[type="submit"]:hover {
+    background-color: #e45c34;
+}
+
+
+.thank-you-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 40px 15px;
+}
+
+.thank-you-box {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    width: 100%;
+}
+
+.thank-you-box h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.thank-you-box p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.thank-you-box strong {
+    color: var(--accent-color);
+}
+
+.return-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.return-button:hover {
+    background-color: #e65a2b;
 }

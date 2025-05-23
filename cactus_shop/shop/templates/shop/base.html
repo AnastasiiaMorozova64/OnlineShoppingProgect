@@ -12,8 +12,7 @@
     </div>
     <div id="subheader">
       <div class="cart">
-        <!-- Разкоменть когда дойдешь до пункта: Настройка корзины в контексте запроса -->
-        <!-- {% with total_items=cart|length %}
+        {% with total_items=cart|length %}
             {% if cart|length > 0 %}
                 Your cart:
                 <a href="{% url "cart:cart_detail" %}">
@@ -23,7 +22,7 @@
             {% else %}
                 Your cart is empty.
             {% endif %}
-        {% endwith %} -->
+        {% endwith %}
       </div>
     </div>
     <div id="content">{% block content %} {% endblock %}</div>
