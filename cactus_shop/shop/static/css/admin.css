@@ -1,0 +1,109 @@
+/* Загальні стилі */
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 20px;
+}
+
+/* Заголовок */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0c4b33;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+.breadcrumbs a {
+    color: #2a6496;
+    text-decoration: none;
+}
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопка друку */
+.object-tools {
+    margin: 15px 0;
+}
+.object-tools a {
+    background-color: #79aec8;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.object-tools a:hover {
+    background-color: #609ab6;
+}
+
+/* Основна таблиця з деталями замовлення */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+table th, table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Таблиця товарів */
+.module {
+    margin-top: 30px;
+}
+.module h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.inline-related table {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+.inline-related th, .inline-related td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+.inline-related .row1 {
+    background-color: #f9f9f9;
+}
+.inline-related .row2 {
+    background-color: #ffffff;
+}
+.inline-related .num {
+    text-align: right;
+}
+.inline-related .total {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+/* Друковане оформлення */
+@media print {
+    .object-tools,
+    .breadcrumbs,
+    #header,
+    #nav-sidebar {
+        display: none;
+    }
+    body {
+        margin: 0;
+        background: white;
+    }
+    table {
+        page-break-inside: avoid;
+    }
+}
