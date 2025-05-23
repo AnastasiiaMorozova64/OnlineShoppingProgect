@@ -32,4 +32,5 @@ jobs:
             -e PYTHONUNBUFFERED=1 \
             -e DJANGO_SETTINGS_MODULE=cactus_shop.settings \
             cactus-shop:latest \
-            pytest cactus_shop/orders/tests.py --verbose
+            pytest cactus_shop/shop/tests.py -v
+            pytest cactus_shop/orders/tests.py -v
