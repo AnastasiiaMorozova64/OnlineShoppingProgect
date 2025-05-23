@@ -39,10 +39,34 @@ a:hover {
 }
 
 #subheader {
-    background-color: #f1f1f1;
-    padding: 0.7em 1em;
-    border-bottom: 1px solid #ccc;
-    font-size: 0.95em;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 2px solid var(--border-color);
+}
+
+#subheader .cart {
+    background-color: white;
+    color: var(--primary-color);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s;
+}
+
+#subheader .cart a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+#subheader .cart a:hover {
+    text-decoration: underline;
 }
 
 #content {
@@ -234,6 +258,7 @@ form select {
 
 /* Кнопка "Add to cart" */
 form input[type="submit"] {
+    margin-top: 15px;
     background-color: var(--accent-color);
     color: #fff;
     border: none;
