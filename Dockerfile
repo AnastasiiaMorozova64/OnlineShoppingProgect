@@ -1,5 +1,5 @@
 FROM python:3.11-slim
-WORKDIR /app
+WORKDIR /OnlineShoppingProjgect
 COPY cactus_shop/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY cactus_shop/ .
