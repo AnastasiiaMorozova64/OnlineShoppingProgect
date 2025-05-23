@@ -210,43 +210,6 @@ a:hover {
 }
 
 
-form {
-    margin-top: 15px;
-}
-
-form select,
-form input[type="number"],
-form input[type="submit"] {
-    padding: 8px 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    font-size: 1rem;
-    margin-right: 10px;
-    font-family: inherit;
-}
-
-/* Стиль для селекту (наприклад: кількість товару) */
-form select {
-    background-color: #fff;
-    cursor: pointer;
-    min-width: 60px;
-}
-
-/* Кнопка "Add to cart" */
-form input[type="submit"] {
-    background-color: var(--accent-color);
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-}
-
-form input[type="submit"]:hover {
-    background-color: #e45c34;
-}
-
-
 .cart {
     width: 100%;
     border-collapse: collapse;
