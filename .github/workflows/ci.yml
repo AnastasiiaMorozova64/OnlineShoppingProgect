@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Перевірка коду
+        uses: actions/checkout@v4
+
+      - name: Налаштування Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Налаштування Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Будування Docker-образу
+        run: |
+          docker build -t cactus-shop:latest -f Dockerfile .
+
+      - name: Виконання тестів у Docker-контейнері
+        run: |
+          docker run --rm \
+            -e PYTHONUNBUFFERED=1 \
+            -e DJANGO_SETTINGS_MODULE=cactus_shop.settings \
+            cactus-shop:latest \
+            pytest cactus_shop/orders/tests.py --verbose
