@@ -20,10 +20,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('admin/order/', include('orders.urls')),
     path('admin/', admin.site.urls),
     path('cart/', include(('cart.urls', 'cart'), namespace='cart')),
     path('', include(('shop.urls', 'shop'), namespace='shop')),
     path('orders/', include(('orders.urls', 'orders'), namespace='orders')),
+    path('', include('orders.urls'))
 ]
 
 if settings.DEBUG:

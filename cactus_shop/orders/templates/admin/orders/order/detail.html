@@ -16,12 +16,15 @@
     </div>
 {% endblock %}
 {% block content %}
-    <h1>Order {{ order.id }}</h1>
-    <ul class="object-tools">
-        <li>
-            <a href="#" onclick="window.print();">Print order</a>
-        </li>
-    </ul>
+<div class="order-detail">
+        <div class="title-wrapper">
+            <h1>Order {{ order.id }}</h1>
+            <ul class="object-tools">
+                <li>
+                    <a href="#" onclick="window.print();">Print order</a>
+                </li>
+            </ul>
+        </div>
     <table>
         <tr>
             <th>Created</th>
@@ -77,4 +80,5 @@
             </table>
         </div>
     </div>
+</div>
 {% endblock %}
