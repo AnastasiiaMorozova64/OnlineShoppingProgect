@@ -1,0 +1,124 @@
+.title-wrapper {
+    background: linear-gradient(90deg, #4a90e2, #357ABD);
+    padding: 10px 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+.order-detail h1 {
+    color: white;
+    font-weight: 600;
+}
+
+.order-detail .object-tools {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.order-detail .object-tools li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.order-detail .object-tools a {
+    background-color: #357ABD;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.order-detail .object-tools a:hover {
+    background-color: #285a8f;
+}
+
+.order-detail table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.order-detail table h2 {
+    margin: 15px 0 10px 20px;
+    font-size: 18px;
+    color: #222;
+}
+
+.order-detail thead th {
+    background-color: #4a90e2;
+    color: white;
+    text-align: left;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-bottom: 2px solid #357ABD;
+}
+
+.order-detail tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.order-detail tbody tr.row1 {
+    background-color: #f7f9fc;
+}
+
+.order-detail tbody tr.row2 {
+    background-color: white;
+}
+
+.order-detail tbody td {
+    padding: 12px 20px;
+    vertical-align: middle;
+}
+
+.order-detail .num {
+    text-align: right;
+    font-family: monospace, monospace;
+    color: #555;
+}
+
+.order-detail tr.total {
+    font-weight: 700;
+    background-color: #e1eaff;
+    border-top: 3px solid #357ABD;
+}
+
+.order-detail tr.total td {
+    padding: 14px 20px;
+}
+
+.order-detail table tr th {
+    width: 150px;
+    background-color: #f0f0f0;
+    font-weight: 600;
+    color: #444;
+}
+
+.order-detail table tr td {
+    background-color: #fff;
+    color: #333;
+}
+
+.order-detail a[href^="mailto:"] {
+    color: #357ABD;
+    text-decoration: none;
+}
+
+.order-detail a[href^="mailto:"]:hover {
+    text-decoration: underline;
+}
+
+.order-detail .module {
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(53, 122, 189, 0.2);
+}
