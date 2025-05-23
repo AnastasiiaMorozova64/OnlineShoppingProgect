@@ -1,3 +1,4 @@
+name: CI
 on:
   push:
     branches:
@@ -32,5 +33,4 @@ jobs:
             -e PYTHONUNBUFFERED=1 \
             -e DJANGO_SETTINGS_MODULE=cactus_shop.settings \
             cactus-shop:latest \
-            pytest shop/tests.py --verbose
-            pytest orders/tests.py --verbose
+            pytest --verbose cactus_shop/shop/tests.py cactus_shop/orders/tests.py
