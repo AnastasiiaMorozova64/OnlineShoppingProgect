@@ -450,24 +450,54 @@ form input[type="submit"]:hover {
     background-color: #e45c34;
 }
 
-h1 {
-    font-size: 2rem;
+
+.thank-you-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 40px 15px;
+}
+
+.thank-you-box {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    width: 100%;
+}
+
+.thank-you-box h1 {
+    font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 15px;
 }
 
-.thank-you-message {
-    background-color: #f8f9fa;
-    padding: 25px;
-    border-left: 5px solid var(--accent-color);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+.thank-you-box p {
     font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 600px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.thank-you-message strong {
+.thank-you-box strong {
     color: var(--accent-color);
-    font-weight: 700;
+}
+
+.return-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.return-button:hover {
+    background-color: #e65a2b;
 }
