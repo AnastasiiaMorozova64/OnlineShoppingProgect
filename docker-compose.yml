@@ -9,7 +9,7 @@ services:
       - ./cactus_shop:/app
     environment:
       - PYTHONUNBUFFERED=1
-      - DJANGO_SETTINGS_MODULE=cactus_shop.settings
+      - DJANGO_SETTINGS_MODULE=settings
     networks:
       - app-network
 
