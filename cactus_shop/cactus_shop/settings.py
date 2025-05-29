@@ -59,7 +59,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'cactus_shop.urls'
-
+#for commit
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
