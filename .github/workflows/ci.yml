@@ -1,16 +1,17 @@
-name: CI
+name: CI/CD Pipeline
 on:
   push:
     branches:
       - main
+      - master
   pull_request:
     branches:
       - main
+      - master
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Перевірка коду
         uses: actions/checkout@v4
@@ -34,3 +35,21 @@ jobs:
             -e DJANGO_SETTINGS_MODULE=cactus_shop.settings \
             cactus-shop:latest \
             pytest --verbose shop/tests.py orders/tests.py
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'  # Виконується тільки для push, а не для pull request
+    steps:
+      - name: Перевірка коду
+        uses: actions/checkout@v4
+
+      - name: Розгортання на Render
+        env:
+          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+          RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer $RENDER_API_KEY" \
+            -H "Content-Type: application/json" \
+            https://api.render.com/v1/services/$RENDER_SERVICE_ID/deploys
